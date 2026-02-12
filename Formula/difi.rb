@@ -5,21 +5,21 @@
 class Difi < Formula
   desc "The pixel-perfect terminal diff viewer"
   homepage "https://github.com/oug-t/difi"
-  version "0.1.5"
+  version "0.1.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.5/difi_Darwin_x86_64.tar.gz"
-      sha256 "38e1556ed77fc1c4c7655d7d48eabeb820eb0a76b42bac3d76375b7b918b7d76"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.6/difi_Darwin_x86_64.tar.gz"
+      sha256 "5233929fdb2ab63fa50de4e0c4249e4bd78646fc7a59abca614751594ea54482"
 
       def install
         bin.install "difi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.5/difi_Darwin_arm64.tar.gz"
-      sha256 "f88f87bcdb433708a502da4054b87f32cfaefed56d3186f0e11fd19678b49c1e"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.6/difi_Darwin_arm64.tar.gz"
+      sha256 "05b0296b192de0153ca3e9e1cc7e81842bb996c55a18ceb6e132f70026ff3e81"
 
       def install
         bin.install "difi"
@@ -29,15 +29,15 @@ class Difi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.5/difi_Linux_x86_64.tar.gz"
-      sha256 "9edb3545c843d782e6c79011154fd4585168e4d756364153c3faa3b6dec3f961"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.6/difi_Linux_x86_64.tar.gz"
+      sha256 "59f61c2dc2a2a79866599f10bf492f65cf0dfadd479287b9a85ffeaac454d761"
       def install
         bin.install "difi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.5/difi_Linux_arm64.tar.gz"
-      sha256 "6434ad209b4f031168d126f2456e46a3de2aa590f1f23336dcb9c9d203a1eb10"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.6/difi_Linux_arm64.tar.gz"
+      sha256 "caf1cf464636d06cadf7c27585de7381c14e4f9fa8ad592e1c2fa831ab76e39f"
       def install
         bin.install "difi"
       end
