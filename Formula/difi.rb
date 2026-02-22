@@ -5,23 +5,23 @@
 class Difi < Formula
   desc "The pixel-perfect terminal diff viewer"
   homepage "https://github.com/oug-t/difi"
-  version "0.1.7"
+  version "0.1.8"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.7/difi_Darwin_x86_64.tar.gz"
-      sha256 "2a5588df48edd92e7ffee4b3418c618391a73727a00d39d317c1c94ded6155ad"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.8/difi_Darwin_x86_64.tar.gz"
+      sha256 "a7dcd4dfd786c12f250363fbe19c9b5710cbb232118b9c2a413e82a38fddf3a4"
 
-      def install
+      define_method(:install) do
         bin.install "difi"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.7/difi_Darwin_arm64.tar.gz"
-      sha256 "fa786608bb791226369d3cbf9bd56f8ffed6e42ee644e43e22332f5a061b2b23"
+      url "https://github.com/oug-t/difi/releases/download/v0.1.8/difi_Darwin_arm64.tar.gz"
+      sha256 "64dc4f301320b79a1d79d32bfc4450df5d167693046ba563eb32bd4c0dc95a74"
 
-      def install
+      define_method(:install) do
         bin.install "difi"
       end
     end
@@ -29,16 +29,16 @@ class Difi < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.7/difi_Linux_x86_64.tar.gz"
-      sha256 "3ad7e0008cd93f37d3da81e5dcd7becf6afc47c3496bf258bbdfde28a49fff75"
-      def install
+      url "https://github.com/oug-t/difi/releases/download/v0.1.8/difi_Linux_x86_64.tar.gz"
+      sha256 "2dff8223457c7b12c5e3f881552d8db1cb757140f7b808ca3963ffdcb2352b25"
+      define_method(:install) do
         bin.install "difi"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/oug-t/difi/releases/download/v0.1.7/difi_Linux_arm64.tar.gz"
-      sha256 "0905e780cb1b1286acc73a08d8053aac7074b958c393c9ec04057c880069c4ee"
-      def install
+      url "https://github.com/oug-t/difi/releases/download/v0.1.8/difi_Linux_arm64.tar.gz"
+      sha256 "74ab8389758973a1ff8dbff8af620ac0013ec9c1109a642954fe12ae5c0801ad"
+      define_method(:install) do
         bin.install "difi"
       end
     end
